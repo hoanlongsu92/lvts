@@ -27,7 +27,7 @@ public class MainActivity extends FragmentActivity implements
 	private MenuItem refreshMenuItem;
 	
 	// Tab titles
-	private String[] tabs = { "Top Rated", "Games", "Movies" };
+	private String[] tabs = { "Running App", "Network", "Battery" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -1,8 +1,8 @@
 package com.lvts.appmanager.adapter;
 
-import com.lvts.appmanager.GamesFragment;
-import com.lvts.appmanager.MoviesFragment;
-import com.lvts.appmanager.TopRatedFragment;
+import com.lvts.appmanager.RunningAppFragment;
+import com.lvts.appmanager.NetworkFragment;
+import com.lvts.appmanager.BatteryFragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -20,13 +20,13 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 		switch (index) {
 		case 0:
 			// Top Rated fragment activity
-			return new TopRatedFragment();
+			return new BatteryFragment();
 		case 1:
 			// Games fragment activity
-			return new GamesFragment();
+			return new RunningAppFragment();
 		case 2:
 			// Movies fragment activity
-			return new MoviesFragment();
+			return new NetworkFragment();
 		}
 
 		return null;

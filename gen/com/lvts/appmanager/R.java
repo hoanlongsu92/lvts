@@ -43,9 +43,9 @@ public final class R {
         public static final int activity_location_found=0x7f030001;
         public static final int activity_main=0x7f030002;
         public static final int activity_search_results=0x7f030003;
-        public static final int fragment_games=0x7f030004;
-        public static final int fragment_movies=0x7f030005;
-        public static final int fragment_top_rated=0x7f030006;
+        public static final int fragment_battery=0x7f030004;
+        public static final int fragment_network=0x7f030005;
+        public static final int fragment_running_app=0x7f030006;
     }
     public static final class menu {
         public static final int activity_main_actions=0x7f080000;
