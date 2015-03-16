@@ -15,6 +15,7 @@ public class BatteryFragment extends Fragment {
 
 		View rootView = inflater.inflate(R.layout.fragment_battery, container, false);
 		
+		
 		return rootView;
 	}
 }
