@@ -18,13 +18,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.widget.ListView;
 
 import com.android.volley.Response;
@@ -45,9 +40,9 @@ public class RunningAppFragment extends Fragment {
     
     @Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		
-		listView = (ListView) findViewById(R.id.list);
-        adapter = new CustomListAdapter(this, movieList);
+    	View rootView = inflater.inflate(R.layout.fragment_running_app,null);
+		listView = (ListView) rootView.findViewById(R.id.list);
+        adapter = new CustomListAdapter(this.getActivity(), movieList);
         listView.setAdapter(adapter);
         
      // Creating volley request obj
@@ -102,7 +97,7 @@ public class RunningAppFragment extends Fragment {
  
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(movieReq);      
-		View rootView = inflater.inflate(R.layout.fragment_running_app, container, false);
+		//View rootView = inflater.inflate(R.layout.fragment_running_app, container, false);
 		
 		return rootView;
 	}

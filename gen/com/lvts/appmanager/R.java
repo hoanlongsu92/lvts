@@ -46,20 +46,21 @@ public final class R {
         public static final int list_row_selector=0x7f020007;
     }
     public static final class id {
-        public static final int action_check_updates=0x7f0a000c;
-        public static final int action_help=0x7f0a000b;
-        public static final int action_location_found=0x7f0a000d;
-        public static final int action_refresh=0x7f0a000a;
-        public static final int action_search=0x7f0a0009;
-        public static final int action_settings=0x7f0a000e;
-        public static final int genre=0x7f0a0007;
-        public static final int list=0x7f0a0003;
+        public static final int action_check_updates=0x7f0a000d;
+        public static final int action_help=0x7f0a000c;
+        public static final int action_location_found=0x7f0a000e;
+        public static final int action_refresh=0x7f0a000b;
+        public static final int action_search=0x7f0a000a;
+        public static final int action_settings=0x7f0a000f;
+        public static final int genre=0x7f0a0008;
+        public static final int list=0x7f0a0004;
         public static final int pager=0x7f0a0001;
         public static final int progressBar=0x7f0a0000;
-        public static final int rating=0x7f0a0006;
-        public static final int releaseYear=0x7f0a0008;
-        public static final int thumbnail=0x7f0a0004;
-        public static final int title=0x7f0a0005;
+        public static final int rating=0x7f0a0007;
+        public static final int releaseYear=0x7f0a0009;
+        public static final int textView=0x7f0a0003;
+        public static final int thumbnail=0x7f0a0005;
+        public static final int title=0x7f0a0006;
         public static final int txtQuery=0x7f0a0002;
     }
     public static final class layout {
