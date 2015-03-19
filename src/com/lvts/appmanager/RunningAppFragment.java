@@ -42,8 +42,13 @@ public class RunningAppFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     	View rootView = inflater.inflate(R.layout.fragment_running_app,null);
 		listView = (ListView) rootView.findViewById(R.id.list);
+		
         adapter = new CustomListAdapter(this.getActivity(), movieList);
         listView.setAdapter(adapter);
+        pDialog = new ProgressDialog(this.getActivity());
+        // Showing progress dialog before making http request
+        pDialog.setMessage("Loading...");
+        pDialog.show();
         
      // Creating volley request obj
         JsonArrayRequest movieReq = new JsonArrayRequest(url,

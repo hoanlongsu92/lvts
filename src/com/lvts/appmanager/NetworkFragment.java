@@ -25,8 +25,7 @@ public class NetworkFragment extends Fragment {
 
 		 ActivityManager activityManager = (ActivityManager) this.getActivity().getSystemService(Activity.ACTIVITY_SERVICE);
 
-		 List<RunningAppProcessInfo> procInfos = activityManager
-		    .getRunningAppProcesses();
+		 List<RunningAppProcessInfo> procInfos = activityManager.getRunningAppProcesses();
 		 for (int idx = 0; idx < procInfos.size(); idx++) {
 		   tv.setText(tv.getText() + "" + (idx + 1) + "."
 		     + procInfos.get(idx).processName + "\n");
