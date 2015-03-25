@@ -24,9 +24,9 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 		case 1:
 			// Games fragment activity
 			return new NetworkFragment();
-		case 2:
-			// Movies fragment activity
-			return new BatteryFragment();
+//		case 2:
+//			// Movies fragment activity
+//			return new BatteryFragment();
 		}
 
 		return null;
@@ -35,7 +35,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public int getCount() {
 		// get item count - equal to number of tabs
-		return 3;
+		return 2;
 	}
 
 }

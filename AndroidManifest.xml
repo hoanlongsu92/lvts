@@ -37,7 +37,7 @@
         
         <activity
             android:name="com.lvts.appmanager.AllAppsActivity"
-            android:label="@string/app_name"
+            android:label="@string/action_all_application"
             android:parentActivityName="com.lvts.appmanager.MainActivity" >
         </activity>
         

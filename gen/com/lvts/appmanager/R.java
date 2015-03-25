@@ -46,10 +46,11 @@ public final class R {
         public static final int list_row_selector=0x7f020007;
     }
     public static final class id {
+        public static final int action_all_application=0x7f0a000f;
         public static final int action_check_updates=0x7f0a0010;
-        public static final int action_help=0x7f0a000f;
+        public static final int action_help=0x7f0a000e;
         public static final int action_location_found=0x7f0a0011;
-        public static final int action_refresh=0x7f0a000e;
+        public static final int action_refresh=0x7f0a0014;
         public static final int action_search=0x7f0a000d;
         public static final int action_settings=0x7f0a0012;
         public static final int app_icon=0x7f0a000a;
@@ -82,12 +83,14 @@ public final class R {
         public static final int activity_main_actions=0x7f090000;
         public static final int main=0x7f090001;
         public static final int menu=0x7f090002;
+        public static final int menu_fragment=0x7f090003;
     }
     public static final class string {
-        public static final int about_desc=0x7f07000c;
-        public static final int about_title=0x7f07000b;
-        public static final int action_about=0x7f07000d;
-        public static final int action_check_updates=0x7f070008;
+        public static final int about_desc=0x7f07000d;
+        public static final int about_title=0x7f07000c;
+        public static final int action_about=0x7f07000e;
+        public static final int action_all_application=0x7f070008;
+        public static final int action_check_updates=0x7f070009;
         public static final int action_contacts=0x7f070006;
         public static final int action_help=0x7f070007;
         public static final int action_location_found=0x7f070004;
@@ -99,11 +102,11 @@ public final class R {
         /**  Activity titles 
          */
         public static final int activity_location_found=0x7f070002;
-        public static final int app_name=0x7f07000a;
+        public static final int app_name=0x7f07000b;
         public static final int hello_world=0x7f070001;
         /**  Search  
          */
-        public static final int search_hint=0x7f070009;
+        public static final int search_hint=0x7f07000a;
     }
     public static final class style {
         /** 

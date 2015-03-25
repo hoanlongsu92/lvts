@@ -121,7 +121,7 @@ public class AllAppsActivity extends ListActivity {
 		return applist;
 	}
 
-	private class LoadApplications extends AsyncTask<Void, Void, Void> {
+	public class LoadApplications extends AsyncTask<Void, Void, Void> {
 		private ProgressDialog progress = null;
 
 		@Override

@@ -13,12 +13,13 @@
     <string name="action_refresh">Refresh</string>
     <string name="action_contacts">Contacts</string>
     <string name="action_help">Help</string>
+    <string name="action_all_application">All Application</string>
     <string name="action_check_updates">Check for Updates</string>
     
     <!-- Search  -->
     <string name="search_hint">Search ..</string>
     
-    <string name="app_name">Application Manager</string>
+    <string name="app_name">Application</string>
     <string name="about_title">Javatechig.com</string>
     <string name="about_desc">Provides tutorials, tips, examples and source code on leading Java, Android, Blackberry, PhoneGap and other mobile technologies.</string>
     <string name="action_about">About</string>

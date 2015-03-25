@@ -1,6 +1,7 @@
 package com.lvts.appmanager.adapter;
 
 import com.lvts.appmanager.R;
+
 import java.util.List;
 
 import android.content.Context;
@@ -52,6 +53,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
 
 		ApplicationInfo data = appsList.get(position);
 		if (null != data) {
+//			Log.e("adater", ">>>>>>>>>>>>>> "+data.processName);
 			TextView appName = (TextView) view.findViewById(R.id.app_name);
 			TextView packageName = (TextView) view.findViewById(R.id.app_paackage);
 			ImageView iconview = (ImageView) view.findViewById(R.id.app_icon);

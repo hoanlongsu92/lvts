@@ -7,16 +7,20 @@
           android:showAsAction="ifRoom"
           android:actionViewClass="android.widget.SearchView"/> 
            
-    <!-- Refresh -->
+    <!-- Refresh 
     <item android:id="@+id/action_refresh"
           android:icon="@drawable/ic_action_refresh"
           android:title="@string/action_refresh" 
           android:showAsAction="ifRoom" />
-    
+    -->
     <!-- Help -->
     <item android:id="@+id/action_help"
           android:icon="@drawable/ic_action_help"
           android:title="@string/action_help" 
+          android:showAsAction="never"/>
+    
+    <item android:id="@+id/action_all_application"
+          android:title="@string/action_all_application" 
           android:showAsAction="never"/>
     
     <!-- Check updates -->

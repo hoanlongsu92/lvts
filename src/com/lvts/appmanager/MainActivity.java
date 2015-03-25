@@ -27,7 +27,8 @@ public class MainActivity extends FragmentActivity implements
 	private MenuItem refreshMenuItem;
 	
 	// Tab titles
-	private String[] tabs = { "Running App", "Network", "Battery" };
+//	private String[] tabs = { "Running App", "Network", "Battery" };
+	private String[] tabs = { "Running App", "Network"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -131,17 +132,20 @@ public class MainActivity extends FragmentActivity implements
         case R.id.action_search:
             // search action
             return true;
-        case R.id.action_refresh:
-        	// refresh
-            refreshMenuItem = item;
-            // load the data from server
-            new SyncData().execute();
-            return true;            
+//        case R.id.action_refresh:
+//        	// refresh
+//            refreshMenuItem = item;
+//            // load the data from server
+//            new SyncData().execute();
+//            return true;            
         case R.id.action_location_found:
             // location found
             LocationFound();
             return true;
         case R.id.action_help:
+            // help action
+            return true;
+        case R.id.action_all_application:
         	AllAppsActivity();
             // help action
             return true;
