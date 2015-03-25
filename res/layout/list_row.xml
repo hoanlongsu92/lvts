@@ -13,6 +13,9 @@
         android:layout_alignParentLeft="true"
         android:layout_marginRight="8dp" />
 
+	<!-- Thumbnail Image -->
+
+
     <!-- Movie Title -->
     <TextView
         android:id="@+id/title"

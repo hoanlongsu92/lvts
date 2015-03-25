@@ -46,14 +46,18 @@ public final class R {
         public static final int list_row_selector=0x7f020007;
     }
     public static final class id {
-        public static final int action_check_updates=0x7f0a000d;
-        public static final int action_help=0x7f0a000c;
-        public static final int action_location_found=0x7f0a000e;
-        public static final int action_refresh=0x7f0a000b;
-        public static final int action_search=0x7f0a000a;
-        public static final int action_settings=0x7f0a000f;
+        public static final int action_check_updates=0x7f0a0010;
+        public static final int action_help=0x7f0a000f;
+        public static final int action_location_found=0x7f0a0011;
+        public static final int action_refresh=0x7f0a000e;
+        public static final int action_search=0x7f0a000d;
+        public static final int action_settings=0x7f0a0012;
+        public static final int app_icon=0x7f0a000a;
+        public static final int app_name=0x7f0a000b;
+        public static final int app_paackage=0x7f0a000c;
         public static final int genre=0x7f0a0008;
         public static final int list=0x7f0a0004;
+        public static final int menu_about=0x7f0a0013;
         public static final int pager=0x7f0a0001;
         public static final int progressBar=0x7f0a0000;
         public static final int rating=0x7f0a0007;
@@ -72,29 +76,34 @@ public final class R {
         public static final int fragment_network=0x7f030005;
         public static final int fragment_running_app=0x7f030006;
         public static final int list_row=0x7f030007;
+        public static final int snippet_list_row=0x7f030008;
     }
     public static final class menu {
         public static final int activity_main_actions=0x7f090000;
         public static final int main=0x7f090001;
+        public static final int menu=0x7f090002;
     }
     public static final class string {
-        public static final int action_check_updates=0x7f070009;
-        public static final int action_contacts=0x7f070007;
-        public static final int action_help=0x7f070008;
-        public static final int action_location_found=0x7f070005;
-        public static final int action_refresh=0x7f070006;
+        public static final int about_desc=0x7f07000c;
+        public static final int about_title=0x7f07000b;
+        public static final int action_about=0x7f07000d;
+        public static final int action_check_updates=0x7f070008;
+        public static final int action_contacts=0x7f070006;
+        public static final int action_help=0x7f070007;
+        public static final int action_location_found=0x7f070004;
+        public static final int action_refresh=0x7f070005;
         /**  Action Bar action items 
          */
-        public static final int action_search=0x7f070004;
-        public static final int action_settings=0x7f070001;
+        public static final int action_search=0x7f070003;
+        public static final int action_settings=0x7f070000;
         /**  Activity titles 
          */
-        public static final int activity_location_found=0x7f070003;
-        public static final int app_name=0x7f070000;
-        public static final int hello_world=0x7f070002;
+        public static final int activity_location_found=0x7f070002;
+        public static final int app_name=0x7f07000a;
+        public static final int hello_world=0x7f070001;
         /**  Search  
          */
-        public static final int search_hint=0x7f07000a;
+        public static final int search_hint=0x7f070009;
     }
     public static final class style {
         /** 

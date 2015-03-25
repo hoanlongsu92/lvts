@@ -142,6 +142,7 @@ public class MainActivity extends FragmentActivity implements
             LocationFound();
             return true;
         case R.id.action_help:
+        	AllAppsActivity();
             // help action
             return true;
         case R.id.action_check_updates:
@@ -161,6 +162,11 @@ public class MainActivity extends FragmentActivity implements
     	
         Intent i = new Intent(MainActivity.this, LocationFound.class);
         startActivity(i);
+    }
+    
+    private void AllAppsActivity() {
+    	Intent i = new Intent(MainActivity.this, AllAppsActivity.class);
+    	startActivity(i);
     }
     
     
