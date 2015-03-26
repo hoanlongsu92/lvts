@@ -2,21 +2,77 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="#17df0d">
+    android:orientation="vertical">
     
-<!--<TextView android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Design Network Screen"
-        android:textSize="20dp"
-        android:layout_centerInParent="true"/> -->
     
-    <TextView
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+	
+	<TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Running Apps \n" />
+        android:layout_height="wrap_content"/>
     
+    <!-- 2 columns for network connection -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="@string/status"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button android:id="@+id/status" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:text="@string/type"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button android:id="@+id/type" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:text="@string/subtype"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button android:id="@+id/subtype" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:text="@string/roaming"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button android:id="@+id/roaming" />
+    </TableRow>
 
 </RelativeLayout>

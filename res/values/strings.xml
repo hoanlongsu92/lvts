@@ -20,8 +20,15 @@
     <string name="search_hint">Search ..</string>
     
     <string name="app_name">Application</string>
-    <string name="about_title">Javatechig.com</string>
-    <string name="about_desc">Provides tutorials, tips, examples and source code on leading Java, Android, Blackberry, PhoneGap and other mobile technologies.</string>
+    <string name="about_title">Network manager</string>
+    <string name="about_desc">Đây là luận văn Thạc sĩ về theo dõi và quản lý các tiến trình có kết nối mạng trên nền tảng Android</string>
     <string name="action_about">About</string>
     
+    
+    <!-- For Network connection -->    
+    <string name="status">Status</string>
+    <string name="type">Type</string>
+    <string name="subtype">Subtype</string>
+    <string name="roaming">Roaming status</string>
+    <string name="menu_settings">Settings</string>
 </resources>

@@ -69,9 +69,9 @@ public class AllAppsActivity extends ListActivity {
 		builder.setTitle(getString(R.string.about_title));
 		builder.setMessage(getString(R.string.about_desc));
 
-		builder.setPositiveButton("Know More", new DialogInterface.OnClickListener() {
+		builder.setPositiveButton("Go to my Facebook", new DialogInterface.OnClickListener() {
 		       public void onClick(DialogInterface dialog, int id) {
-		    	   Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://javatechig.com"));
+		    	   Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/le.quochuy.12"));
 		    	   startActivity(browserIntent);
 		    	   dialog.cancel();
 		       }

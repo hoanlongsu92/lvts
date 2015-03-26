@@ -2,7 +2,7 @@ package com.lvts.appmanager.adapter;
 
 import com.lvts.appmanager.RunningAppFragment;
 import com.lvts.appmanager.NetworkFragment;
-import com.lvts.appmanager.BatteryFragment;
+//import com.lvts.appmanager.BatteryFragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
