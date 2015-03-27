@@ -18,6 +18,14 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+		<receiver android:name="com.lvts.appmanager.ConnectionChangeReceiver"
+          android:label="NetworkConnection">
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+			</intent-filter>
+		</receiver>
+
         <activity
             android:name="com.lvts.appmanager.MainActivity"
             android:label="@string/app_name" >
@@ -26,7 +34,6 @@
                 android:value=".SearchResultsActivity" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

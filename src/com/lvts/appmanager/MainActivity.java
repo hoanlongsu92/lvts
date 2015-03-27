@@ -74,6 +74,7 @@ public class MainActivity extends FragmentActivity implements
 		});
 	}
 	
+	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
