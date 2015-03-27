@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tabs="http://schemas.android.com/apk/res/com.antispycell.connmonitor">
+    <com.antispycell.connmonitor.ConnectionMonitor android:id="@id/connectionmonitor" android:background="#ff111111" android:layout_width="fill_parent" android:layout_height="wrap_content" tabs:bottomBarColor="#ff33b5e5" tabs:bottomBarHeight="2.0dip" tabs:tabIndicatorHeight="3.0dip" />
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0" />
+</LinearLayout>

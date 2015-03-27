@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_root" android:background="@drawable/my_border_opaque" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/dialogText" android:padding="5.0dip" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/welcome" />
+        <ImageView android:id="@id/dialogImage" android:background="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/logo_250" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="12.0sp" android:textColor="#ffdddddd" android:gravity="center_horizontal" android:id="@id/legalText" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/legal" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff4d52ba" android:gravity="center_horizontal" android:id="@id/legalText1" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/termsOfService" />
+            <Button android:textSize="14.0sp" android:textStyle="normal" android:textColor="#ffffffff" android:id="@id/dialogButton" android:background="@drawable/green_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="15.0dip" android:text="Continue" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

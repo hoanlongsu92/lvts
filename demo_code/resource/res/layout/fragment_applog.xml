@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bgr" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="35.0dip">
+        <Button android:textSize="10.0sp" android:textColor="#ee949294" android:gravity="center" android:id="@id/orderbyactive" android:background="@drawable/orderbybutton" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:focusableInTouchMode="false" android:layout_width="0.0dip" android:layout_height="35.0dip" android:text="Order by\nConnections" android:singleLine="false" android:layout_weight="1.0" />
+        <View android:id="@id/separator1" android:background="@*android:color/darker_gray" android:visibility="visible" android:layout_width="0.20000005dip" android:layout_height="fill_parent" />
+        <Button android:textSize="10.0sp" android:textColor="#ee949294" android:gravity="center" android:id="@id/orderbylast" android:background="@drawable/orderbybutton" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:focusableInTouchMode="false" android:layout_width="0.0dip" android:layout_height="35.0dip" android:text="Order by\nIP Addresses" android:singleLine="false" android:layout_weight="1.0" android:soundEffectsEnabled="true" />
+        <View android:id="@id/separator2" android:background="@*android:color/darker_gray" android:visibility="visible" android:layout_width="0.20000005dip" android:layout_height="fill_parent" />
+        <Button android:textSize="10.0sp" android:textColor="#ee949294" android:gravity="center" android:id="@id/orderbypackage" android:background="@drawable/orderbybutton" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:focusableInTouchMode="false" android:layout_width="0.0dip" android:layout_height="35.0dip" android:text="Order by\nApp" android:singleLine="false" android:layout_weight="1.0" android:soundEffectsEnabled="true" />
+    </LinearLayout>
+    <View android:id="@id/separator" android:background="@*android:color/darker_gray" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.20000005dip" />
+    <FrameLayout android:orientation="vertical" android:background="@drawable/bgr" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="#99ffffff" android:gravity="center" android:id="@id/message" android:background="#00ffffff" android:padding="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="App Log is empty. Please start the Live Capture to collect some data." />
+        <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ListView android:layout_gravity="top" android:id="@*android:id/list" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:cacheColorHint="#00000000" android:layout_above="@id/adlayout" />
+            <RelativeLayout android:id="@id/adlayout" android:background="@drawable/graygradient" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true">
+                <ImageView android:id="@id/ownad" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginLeft="-25.0dip" android:src="@drawable/antispyicon" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+                <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:textColorHighlight="#ffffffff" android:id="@id/myad" android:paddingLeft="50.0dip" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Is Your Phone Being Tapped? \nFind out for FREE with Anti Spy Mobile!" android:shadowColor="#ffffffff" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

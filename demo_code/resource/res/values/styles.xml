@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme" parent="@*android:style/Theme.Light" />
+    <style name="SettingsHeader" parent="@*android:style/TextAppearance.Small">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">#ff080808</item>
+        <item name="android:padding">6.0sp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="SettingsTitle">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="SettingsSummary">
+        <item name="android:textSize">12.0sp</item>
+    </style>
+</resources>

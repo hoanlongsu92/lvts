@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bottomBarColor" format="color" />
+    <attr name="bottomBarHeight" format="dimension" />
+    <attr name="tabIndicatorHeight" format="dimension" />
+</resources>
