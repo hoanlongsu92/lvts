@@ -4,16 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.lvts.appmanager.R;
+import com.lvts.appmanager.RunningAppFragment.LoadApplications;
+import com.lvts.appmanager.adapter.ApplicationAdapter;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -21,71 +26,93 @@ import android.widget.Toast;
 
 
 public class NetworkFragment extends ListFragment{
-	
+	public View rootView;
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_network, container, false);		
-		
-		Map<String, String> networkDetails = new HashMap<String, String>();
-		try {
-			ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-			NetworkInfo wifiNetwork = connectivityManager
-					.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-			if (wifiNetwork != null && wifiNetwork.isConnected()) {
-
-				networkDetails.put("Type", wifiNetwork.getTypeName());
-				networkDetails.put("Sub type", wifiNetwork.getSubtypeName());
-				networkDetails.put("State", wifiNetwork.getState().name());
-			}
-
-			NetworkInfo mobileNetwork = connectivityManager
-					.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-			if (mobileNetwork != null && mobileNetwork.isConnected()) {
-				networkDetails.put("Type", mobileNetwork.getTypeName());
-				networkDetails.put("Sub type", mobileNetwork.getSubtypeName());
-				networkDetails.put("State", mobileNetwork.getState().name());
-				if (mobileNetwork.isRoaming()) {
-					networkDetails.put("Roming", "YES");
-				} else {
-					networkDetails.put("Roming", "NO");
-				}
-			}
-		} catch (Exception e) {
-			networkDetails.put("Status", e.getMessage());
-		}
-		
-		if (networkDetails.isEmpty()) {
-			rootView.findViewById(R.id.tableRow1).setVisibility(0);
-			TextView value = (TextView) rootView.findViewById(R.id.status);
-			value.setText("Connection unavailable");
-		} else {
-			if (networkDetails.containsKey("State")) {
-				rootView.findViewById(R.id.tableRow1).setVisibility(0);
-				TextView value = (TextView) rootView.findViewById(R.id.status);
-				value.setText(networkDetails.get("State"));
-			}
-			if (networkDetails.containsKey("Type")) {
-				rootView.findViewById(R.id.tableRow2).setVisibility(0);
-				TextView value = (TextView) rootView.findViewById(R.id.type);
-				value.setText(networkDetails.get("Type"));
-			}
-			if (networkDetails.containsKey("Sub type")) {
-				rootView.findViewById(R.id.tableRow3).setVisibility(0);
-				TextView value = (TextView) rootView.findViewById(R.id.subtype);
-				value.setText(networkDetails.get("Sub type"));
-			}
-			if (networkDetails.containsKey("Roming")) {
-				rootView.findViewById(R.id.tableRow4).setVisibility(0);
-				TextView value = (TextView) rootView.findViewById(R.id.roaming);
-				value.setText(networkDetails.get("Roming"));
-			}
-		}
-		Toast.makeText(getActivity().getApplicationContext(), networkDetails.toString(), Toast.LENGTH_SHORT).show();
+		setHasOptionsMenu(true);
+		rootView = inflater.inflate(R.layout.fragment_network, container, false);		
+		new LoadApplications().execute();		
 		return rootView;
 	}
 
+	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.menu_fragment, menu);		
 		super.onCreateOptionsMenu(menu, inflater);
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+		boolean result = true;
+
+		switch (item.getItemId()) {
+			case R.id.action_refresh: {
+				new LoadApplications().execute();
+				break;
+			}
+			default: {
+				result = super.onOptionsItemSelected(item);
+				break;
+			}
+		}
+		return result;
+	}
+	
+	public class LoadApplications extends AsyncTask<Void, Void, Void> {
+		private ProgressDialog progress = null;
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			return null;
+		}
+
+		@Override
+		protected void onCancelled() {
+			super.onCancelled();
+		}
+
+		@Override
+		protected void onPostExecute(Void result) {
+			Map<String, String> networkDetails = getConnectionDetails();
+			if (networkDetails.isEmpty()) {
+				rootView.findViewById(R.id.tableRow1).setVisibility(0);
+				TextView value = (TextView) rootView.findViewById(R.id.status);
+				value.setText("Connection unavailable");
+			} else {
+				if (networkDetails.containsKey("State")) {
+					rootView.findViewById(R.id.tableRow1).setVisibility(0);
+					TextView value = (TextView) rootView.findViewById(R.id.status);
+					value.setText(networkDetails.get("State"));
+				}
+				if (networkDetails.containsKey("Type")) {
+					rootView.findViewById(R.id.tableRow2).setVisibility(0);
+					TextView value = (TextView) rootView.findViewById(R.id.type);
+					value.setText(networkDetails.get("Type"));
+				}
+				if (networkDetails.containsKey("Sub type")) {
+					rootView.findViewById(R.id.tableRow3).setVisibility(0);
+					TextView value = (TextView) rootView.findViewById(R.id.subtype);
+					value.setText(networkDetails.get("Sub type"));
+				}
+				if (networkDetails.containsKey("Roming")) {
+					rootView.findViewById(R.id.tableRow4).setVisibility(0);
+					TextView value = (TextView) rootView.findViewById(R.id.roaming);
+					value.setText(networkDetails.get("Roming"));
+				}
+			}
+			progress.dismiss();
+			super.onPostExecute(result);
+		}
+
+		@Override
+		protected void onPreExecute() {
+			progress = ProgressDialog.show(getActivity(), null,
+					"Loading application info...");
+			super.onPreExecute();
+		}
+
+		@Override
+		protected void onProgressUpdate(Void... values) {
+			super.onProgressUpdate(values);
+		}
 	}
 	
 	private Map<String, String> getConnectionDetails() {
